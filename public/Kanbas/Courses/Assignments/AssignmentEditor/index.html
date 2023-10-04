@@ -1,29 +1,86 @@
-<h2><label for="assignmentName"> Assignment Name </label></h2><br/>
-<input value="Assignment 1 - HTML" id="assignmentName" placeholder="Assignment Name"/>
+<select>
+                <option>SpeedGrader</option>
+            </select>
+            <hr style="color: rgb(230, 231, 231);">
+            
+            <h3><label for="assignmentName"> Assignment Name </label></h3>
+            <input value="A1 - ENV + HTML" id="assignmentName"/><br/>
+            <br/>
+            <textarea cols="40" rows="5">This is the assignment description
+            </textarea>
 
-<h3>Description</h3>
-<textarea cols="50" rows="15">
-This is the first assigment to build Kanbas
-</textarea>
-
-<h3>Points</h3>
-<input value="100" type="number" max="100" min="50" step="5"/>
-
-<h3>Submission Type</h3> 
-<input type="checkbox" id="textEntry"/> <label for="textEntry">Entry</label>  <br/>
-<label><input type="checkbox" checked/> Website URL</label> <br/>
-<label><input type="checkbox"/> Media Recordings</label><br/>
-<label><input type="checkbox"/> File Upload</label><br/>
-
-<!-- <h3>Music Genre</h3>
-<input type="radio" name="genre"/> Rock <br/>
-<input type="radio" name="genre"/> Jazz <br/>
-<input type="radio" name="genre"/> Blue <br/>
-# add name attribute to make selection not mutual exclusive
-<h3>Movie Genre</h3>
-<input type="radio" name="movie"/> Horror <br/>
-<input type="radio" name="movie"/> Action <br/>
-<input type="radio" name="movie"/> Comedy <br/> -->
-
-<!-- <h3>Due Date</h3>
-<input type="date" value="2022-9-14" min="2022-9-01" max="2022-9-30"/> -->
+            <p>Points</p>
+            <input value="100" type="number" />
+            <p>Assignment Group<br/>
+            <select>
+                <option>
+                    ASSIGNMENTS
+                </option>
+            </select>
+            </p>
+            <p>Display Grade as<br/>
+            <select>
+                <option>
+                    Percentage
+                </option>
+            </select>
+            </p>
+            <p>Submmision Type<br/>
+                <select>
+                    <option>
+                       Online
+                    </option>
+                </select>
+            </p>
+            <p>Online Entry Options<br/>
+                <label><input type="checkbox">Text Entry</label><br/>
+                <label><input type="checkbox">Website URL</label><br/>
+                <label><input type="checkbox">Media Recordings</label><br/>
+                <label><input type="checkbox">Student Annotation</label><br/>
+                <label><input type="checkbox">File Uploads</label><br/>
+            </p>
+            <p>Submission Attemts<br/>
+                <select>
+                    <option>
+                        Unlimited
+                    </option>
+                </select>
+            </p>
+            <p>Plagiarism Review<br/>
+                <select>
+                    <option>
+                        None
+                    </option>
+                </select>
+            </p>
+            <p>Group Assignment<br/>
+                <input type="checkbox" id="groupAssignment"><label for="groupAssignment">This is a group assignment</label><br/>
+            </p>
+            <p>Peer Reviews<br/>
+                <input type="checkbox" id="PeerReviews"><label for="PeerReviews">Require Peer Reviews</label><br/>
+            </p>
+            <p>
+                Assign<br/>
+                Assign to<br/>
+                <input type="text" value="Everyone"/>
+            </p>
+            <p>
+                Due<br/>
+                <input type="date" value="2021-01-01"/>
+            </p>
+            <p>
+                Availavle from<br/>
+                <input type="date" value="2021-01-01"/>
+            </p>
+            <p>
+                Until<br/>
+                <input type="date" value="2021-01-01"/>
+            </p>
+            <p>
+                <form action="/Kanbas/Courses/Assignments/screen.html">
+                    <button>Cancel</button>
+                    <button>Save</button>
+                </form>   
+            </p>
+        </td>
+    </tr>

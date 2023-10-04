@@ -1,195 +1,246 @@
-<table>
-    <tr>
-        <td valign="top">
-            <ul>
-                <li><a href="/Kanbas/Account/Profile/screen.html">Account</a></li>
-                <li><a href="/Kanbas/Dashboard/screen.html">Dashboard</a></li>
-                <li><a href="/Kanbas/Courses/Home/screen.html">Courses</a></li>
-                <li><a href="#">Calendar</a></li>
-                <li><a href="#">Inbox</a></li>
-                <li><a href="#">History</a></li>
-                <li><a href="#">Studio</a></li>
-                <li><a href="#">Commons</a></li>
-                <li><a href="#">Help</a></li>
-            </ul>
-        </td>
-        <td valign="top" width="200px">
-            <ul>
-                <li><a href="/Kanbas/Courses/Home/screen.html">Home</a></li>
-                <li><a href="/Kanbas/Courses/Modules/screen.html">Modules</a></li>
-                <li><a href="#">Piazza</a></li>
-                <li><a href="#">Zoom Meetings</a></li>
-                <li><a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a></li>
-                <li><a href="#">Quizzes</a></li>
-                <li><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
-                <li><a href="#">People</a></li>
-                <li><a href="#">Panopto Video</a></li>
-                <li><a href="#">Discussions</a></li>
-                <li><a href="#">Annoucements</a></li>
-                <li><a href="#">Pages</a></li>
-                <li><a href="#">Files</a></li>
-                <li><a href="#">Rubrics</a></li>
-                <li><a href="#">Outcomes</a></li>
-                <li><a href="#">Collaborations</a></li>
-                <li><a href="#">Syllabus</a></li>
-                <li><a href="/Kanbas/Courses/Settings/Course Details/screen.html">Settings</a></li>
-            </ul>
-        </td>
-        <td>
-            <a href="/Kanbas/Courses/Settings/Course Details/screen.html"><input type="button" value="Course Details"/></a>
-            <a href="#"><input type="button" value="Sections"/></a>
-            <a href="/Kanbas/Courses/Settings/Navigation/screen.html"><input type="button" value="Navigation"/></a>
-            <a href="#"><input type="button" value="Apps"/></a>
-            <a href="#"><input type="button" value="Feature Options"/></a>
-            <a href="#"><input type="button" value="Integrations"/></a>
-            <hr style="color: rgb(225, 227, 227);">
-
-            <p style="font-size: 22px;">
-                Course Details
-            </p>
-            <table width="100%">
-                <tr>
-                    <td>Image:</td>
-                    <td><input type="file"/></td>
-                </tr>
-                <tr>
-                    <td>Name:</td>
-                    <td>CS5610 Web Dev Fall 2023 [SEA]</td>
-                </tr>
-                <tr>
-                    <td>Course Code:</td>
-                    <td>CS5610</td>
-                </tr>
-                <tr>
-                    <td>Blueprint Course:</td>
-                    <td>No</td>
-                </tr>
-                <tr>
-                    <td>Course Template:</td>
-                    <td><input id="CourseTemplate" type="checkbox" style="color: rgb(158, 161, 161);"><span style="color: rgb(158, 161, 161);"><label for="CourseTemplate">course as a Course Template</label></span></td>
-                </tr>
-                <tr>
-                    <td>Time Zone:</td>
-                    <td>
-                        <select>
-                            <option>Eastern Time (US & Canada)(-0.5:00/-4:00)</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>SIS ID:</td>
-                    <td>CS5610.12631</td>
-                </tr>
-                <tr>
-                    <td>Subaccount:</td>
-                    <td style="color: rgb(208, 46, 46);">CS Graduate</td>
-                </tr>
-                <tr>
-                    <td>Term:</td>
-                    <td>Fall 2023 Semester Full Term</td>
-                </tr>
-                <tr>
-                    <td valign="top">Participation:</td>
-                    <td>
-                        <select style="width: 250px;">
-                            <option>Term</option>
-                        </select>
-                        <p style="font-size: 12px; color: rgb(148, 146, 144);">Course participation is limited to <b style="color: black;">term</b> start and end dates</p>
-                        <p><b>Start</b></p>
-                        <input type="date"/>
-                        <p><b>End</b></p>
-                        <input type="date"/>
-                        <p>
-                        <label><input type="checkbox"/>Restrict students from viewing course before term start date.</label>
-                        <br>
-                        <label><input type="checkbox"/>Restrict students from viewing course after term end date.</label>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" 
+    rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/all.css" rel="stylesheet">
+    <link href="/Kanbas/kanbas.css" rel="stylesheet"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-1 col1-width d-none d-sm-block">
+                <ul class="nav nav-tabs nav-justified flex-column kanbas-sidebar">
+                    <li><img src="/images/logo.jpg" alt="logo" style="width: 85px; height: 75px;"></li>
+                    <li class="nav-item bg-black"><a class="nav-link" href="/Kanbas/Account/Profile/screen.html">
+                        <span class="fa-stack fa-1x">
+                        <i class="fas fa-circle fa-stack-2x" style="color: rgb(67, 66, 66); font-size: 2rem;"></i>
+                        <i class="fa fa-user fa-stack-1x fa-inverse" style="color: rgb(253, 250, 250); font-size: 1.3rem;"></i>
+                        </span><br/>Account</a></li>
+                    <li class="nav-item bg-black"><a class="nav-link" href="/Kanbas/Dashboard/screen.html"><i class="fa fa-keyboard fa-2x" style="color: rgb(217, 26, 26);">
+                        </i><br/>Dashboard</a></li>
+                    <li class="nav-item bg-black"><a class="nav-link active" href="/Kanbas/Courses/Home/screen.html"><i class="fa fa-book fa-2x" style="color: rgb(217, 26, 26);">
+                        </i><br/>Courses</a></li>
+                    <li class="nav-item bg-black"><a class="nav-link" href="#"><i class="fa fa-calendar fa-2x" style="color: rgb(217, 26, 26);">
+                        </i><br/>Calendar</a></li>
+                    <li class="nav-item bg-black"><a class="nav-link" href="#"><i class="fa fa-inbox fa-2x" style="color: rgb(217, 26, 26);">
+                        </i><br/>Inbox</a></li>
+                    <li class="nav-item bg-black"><a class="nav-link" href="#"><i class="fa fa-clock fa-2x" style="color: rgb(217, 26, 26);">
+                        </i><br/>History</a></li>
+                    <li class="nav-item bg-black"><a class="nav-link" href="#"><i class="fa fa-desktop fa-2x" style="color: rgb(217, 26, 26);">
+                        </i><br/>Studio</a></li>
+                    <li class="nav-item bg-black"><a class="nav-link" href="#"><i class="fa fa-solid fa-arrow-circle-right fa-2x" style="color: rgb(217, 26, 26);">
+                    </i><br/>Commons</a></li>
+                    <li class="nav-item bg-black"><a class="nav-link" href="#"><i class="fa fa-solid fa-question-circle fa-2x" style="color: rgb(217, 26, 26);">
+                        </i><br/>Help</a></li>
+                    <li class="nav-item bg-black"><a class="nav-link disabled" href="#"></a></li>
+                    <li class="nav-item bg-black"><a class="nav-link disabled" href="#"></a></li>
+                    <li class="nav-item bg-black"><a class="nav-link disabled" href="#"></a></li>
+                    <li class="nav-item bg-black"><a class="nav-link disabled" href="#"></a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/Kanbas/Courses/Home/screen.html">CS5610.17387.202410.Fall</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Settings</li>
+                </ol>
+                </nav>
+                <hr style="color: rgb(212, 215, 218);"/>
+                <div class="row">
+                    <div class="col-1 col2-width d-none d-sm-block"> 
+                        <ul class="nav flex-column account-sidebar mt-4">
+                            <li class="nav-item account-width"><a class="nav-link  text-danger" href="/Kanbas/Courses/Home/screen.html">Home</a></li>
+                            <li class="nav-item account-width"><a class="nav-link  text-danger" href="/Kanbas/Courses/Modules/screen.html">Modules</a></li>
+                            <li class="nav-item account-width"><a class="nav-link  text-danger" href="#">Piazza</a></li>
+                            <li class="nav-item account-width"><a class="nav-link  text-danger" href="#">Zoom Meetings</a></li>
+                            <li class="nav-item account-width"><a class="nav-link  text-danger" href="/Kanbas/Courses/Assignments/screen.html">Assignments</a></li>
+                            <li class="nav-item account-width"><a class="nav-link  text-danger" href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
+                            <li class="nav-item account-width"><a class="nav-link  text-danger" href="#">People</a></li>
+                            <li class="nav-item account-width"><a class="nav-link  text-danger" href="#">Quizzes</a></li>
+                            <li class="nav-item account-width"><a class="nav-link  text-danger" href="#">Panopto Video</a></li>
+                            <li class="nav-item account-width"><a class="nav-link  text-danger" href="#">Discussions</a></li>
+                            <li class="nav-item account-width"><a class="nav-link  text-danger" href="#">Annoucements</a></li>
+                            <li class="nav-item account-width"><a class="nav-link  text-danger" href="#">Pages</a></li>
+                            <li class="nav-item account-width"><a class="nav-link  text-danger" href="#">Files</a></li>
+                            <li class="nav-item account-width"><a class="nav-link  text-danger" href="#">Rubrics</a></li>
+                            <li class="nav-item account-width"><a class="nav-link  text-danger" href="#">Outcomes</a></li>
+                            <li class="nav-item account-width"><a class="nav-link  text-danger" href="#">Collaborations</a></li>
+                            <li class="nav-item account-width"><a class="nav-link  text-danger" href="#">Syllabus</a></li>
+                            <li class="nav-item account-width"><a class="nav-link  active" href="/Kanbas/Courses/Settings/Course Details/screen.html">Settings</a></li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <ul class="nav nav-tabs setting-bar">
+                            <li class="nav-item">
+                              <a class="nav-link active" aria-current="page" href="/Kanbas/Courses/Settings/Course Details/screen.html">Course Details</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Sections</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="/Kanbas/Courses/Settings/Navigation/screen.html">Navigation</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link">Apps</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link">Feature Options</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link">Integrations</a>
+                            </li>
+                        </ul>
+                        <p class="mt-4" style="font-size: 22px;">
+                            Course Details
                         </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td valign="top">Default due time:</td>
-                    <td>
-                        <select style="width: 250px;">
-                            <option>Account default(11:59pm)</option>
-                        </select>
-                        <p style="font-size: 12px; color: rgb(90, 87, 85);">This influences the user interface for setting due dates. It does not change the time <br/>due for any exiting assignments</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td valign="top">Language:</td>
-                    <td>
-                        <select style="width: 250px;">
-                            <option>Not set(user-configurable, default to English(Unit))</option>
-                        </select>
-                        <p style="font-size: 12px; color: rgb(90, 87, 85);">This will overide any user/system language preferences. This is only recommended<br/> for foreign language courses.</p>
-                </tr>
-                <tr>
-                    <td>File Storage:</td>
-                    <td>10000 megabytes</td>
-                </tr>
-                <tr>
-                    <td>Large Course:</td>
-                    <td>
-                    <label><input type="checkbox"/>Launch SpeedGrader Filtered by Student Group</label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Grading Scheme:</td>
-                    <td>
-                    <label><input type="checkbox"/>Enable course grading scheme</label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>License:</td>
-                    <td>
-                        <select style="width: 250px;">
-                            <option>Private(Copyrighted)</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>File Copyright:</td>
-                    <td>
-                    <label><input type="checkbox"/>Copyright and license information must be provided for files before thet are published.</label>
-                    </td>
-                </tr>
-                <tr>
-                    <td valign="top">
-                        Visiblity:
-                    </td>
-                    <td>
-                        If you need to make your course public please contact your administrator support.<br/>
-                        <select style="width: 250px;">
-                            <option>Course</option>
-                        </select>
-                        <br/>
-                    <label><input type="checkbox"/>Iclude this course in the public course index</label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Format:</td>
-                    <td>
-                        <select style="width: 250px;">
-                            <option>On-Campus</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Mastery Paths:</td>
-                    <td>
-                    <label><input type="checkbox"/>Enable individual learning paths for students based on assessment</label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Description:</td>
-                    <td>
-                        <textarea cols="40" rows="6"></textarea>
-                        <p><a href="#" style="text-decoration: none; color: rgb(196, 28, 28);">&nbsp&nbsp&nbsp&nbspmore options</a></p>
-                    </td>
-                </tr>
-            </table>
-            <hr style="color: rgb(226, 233, 233);">
-            <form action="/Kanbas/Courses/Home/screen.html"><button style="float: right; margin-bottom: 20px;">Update Coursre Details</button></form>
-        </td>
-    </tr>
-</table>
+                        <div class="row mb-2">
+                            <div class="col-2 d-flex align-items-center">
+                                <lable class="form-label" for="image">Image:</lable>
+                                
+                                
+                            </div>
+                            <div class="col">
+                                <div class="d-flex justify-content-center align-items-center" style="width: 350px; height: 200px; border-style: solid; border-width: 1px; border-color: rgb(155, 156, 158);">
+                                    <input id="image" class="form-control w-50" type="file"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <div class="col-2">
+                                <label class="form-label d-block mb-2" for="name">Name:</label>
+                                <label class="form-label mb-3" for="courseCode">Course Code:</label>
+                                <label class="form-label mb-3" for="blueprintCourse">Blueprint Course:</label>
+                                <label class="form-label mb-2" for="courseTemplate">Course Template:</label>
+                            </div>
+                            <div class="col">
+                                <div id="name" class="mb-2">CS5610 Web Dev Fall 2023 [SEA]</div>
+                                <div>CS5610</div>
+                                <div class="mt-3 mb-3">No</div>
+                                <label><input id="courseTemplate" type="checkbox" style="color: rgb(158, 161, 161);"><span style="color: rgb(158, 161, 161);" class="ms-1">Enable course as a Course Template</span></label>
+                            </div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <div class="col-2 d-flex align-items-center">
+                                <label for="timeZone">Time Zone:</label>
+                            </div>
+                            <div class="col">
+                                <select id="timeZone" class="form-select w-50">
+                                    <option>Eastern Time (US & Canada)(-0.5:00/-4:00)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <div class="col-2">
+                                <p>SIS ID:</p>
+                                <p>Subaccount:</p>
+                                <p>Term:</p>
+                                <p><label for="participation">Participation:</label></p>
+                            </div>
+                            <div class="col">
+                                <p>CS5610.12631</p>
+                                <p class="text-danger">CS Graduate</p>
+                                <p>Fall 2023 Semester Full Term</p>
+                                <select id="participation" class="form-select w-50">
+                                    <option>Term</option>
+                                </select>
+                                <div class="form-text">
+                                    Course participation is limited to <b style="color: black;">term</b> start and end dates
+                                </div>
+                                <label class="form-label fw-semibold mt-1" for="start">Start</label>
+                                <input class="form-control w-25" type="date" id="start"/>
+                                <label class="form-label fw-semibold mt-1" for="date">End</label>
+                                <input class="form-control w-25 mb-1" type="date" id="date"/>
+                                <label class="d-block mb-1"><input type="checkbox" class="me-1"/>Restrict students from viewing course before term start date.</label>
+                                <label><input type="checkbox" class="me-1"/>Restrict students from viewing course after term end date.</label>
+                            </div>                           
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-2">
+                                <label for="defaultDueTime">Default due time:</label>
+                            </div>
+                            <div class="col">
+                                <select id="defaultDueTime" class="form-select w-50">
+                                    <option>Account default(11:59pm)</option>
+                                </select>
+                                <div class="form-text">This influences the user interface for setting due dates. It does not change the time <br/>due for any exiting assignments</div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-2">
+                                <label for="language">Language:</label>
+                            </div>
+                            <div class="col">
+                                <select id="language" class="form-select w-50">
+                                    <option>Not set(user-configurable, default to English(Unit))</option>
+                                </select>
+                                <div class="form-text">This will overide any user/system language preferences. This is only recommended<br/> for foreign language courses.</div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-2">
+                                <p>File Storage:</p>
+                                <label for="largeCourse" class="mb-2">Large Course:</label>
+                                <label for="gradingScheme" class="mb-2">Grading Scheme:</label>
+                                <label for="license" class="mb-3">License:</label>
+                                <label for="fileCopyright" class="mb-4">File Copyright:</label>
+                                <label for="visiblity">Visiblity:</label>
+                            </div>
+                            <div class="col">
+                                <p class="mb-3">10000 megabytes</p>
+                                <input id="largeCourse" type="checkbox"  class="me-1 mb-2"/>Launch SpeedGrader Filtered by Student Group
+                                <br/>
+                                <input id="gradingScheme" type="checkbox"  class="me-1 mb-3"/>Enable course grading scheme
+                                <select id="license" class="form-select w-50 mb-2">
+                                    <option>Private(Copyrighted)</option>
+                                </select>
+                                <input id="fileCopyright" type="checkbox" class="me-1"/>Copyright and license information must be provided for files before thet are published.
+                                <div class="form-text mt-3">If you need to make your course public please contact your administrator support.</div> 
+                                <select id="visiblity" class="form-select w-50">
+                                    <option>Course</option>
+                                </select>
+                                <label><input type="checkbox" class="me-1"/>Include this course in the public course index</label>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-2">
+                                <label for="format" class="mb-4">Format:</label>
+                                <label for="MasteryPaths">Mastery Paths:</label>
+                            </div>
+                            <div class="col">
+                                <select id="format" class="form-select w-50 mb-2">
+                                    <option>On-Campus</option>
+                                </select>
+                                <input id="MasteryPaths" type="checkbox" class="me-1"/>Enable individual learning paths for students based on assessment
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-2 d-flex align-items-center">
+                                <label for="description">Description:</label>
+                            </div>
+                            <div class="col">
+                                <textarea id="description" class="form-control w-50 mb-2" style="height: 150px;"></textarea>
+                                <a href="#">more options</a>
+                            </div>
+                            <hr class="mt-2" style="color: rgb(208, 210, 211);"/>
+                            <form action="/Kanbas/Courses/Home/screen.html"><button class="btn btn-danger text-light float-end">Update Coursre Details</button></form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

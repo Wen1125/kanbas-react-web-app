@@ -1,0 +1,125 @@
+.col1-width {
+  width: 85px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.col2-width {
+  width: 190px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.kanbas-sidebar {
+  width: 85px;
+  position: fixed;
+}
+
+.account-width {
+  width: 190px;
+  padding-left: 20px;
+}
+
+.nav {
+  --bs-nav-link-padding-x: 5px;
+  --bs-nav-link-padding-y: 5px;
+}
+
+.kanbas-sidebar .nav-link{
+  font-size: 14px;
+  height: 66.25px;
+  color: white; 
+}
+
+.kanbas-sidebar .nav-link.active{
+  font-size: 14px;
+  height: 66.25px;
+  color: rgb(197, 37, 37); 
+}
+
+.nav-tabs {
+  --bs-nav-tabs-border-color: #080809;
+  --bs-nav-tabs-border-radius: 0rem;
+  --bs-nav-tabs-link-active-bg: #fff;
+}
+
+.account-sidebar .nav-link {
+  font-size: 15px;
+  padding: 0px;
+  color: rgb(197, 37, 37); 
+  text-decoration: none; 
+  text-align: left; 
+  white-space: wrap; 
+  margin-bottom: 15px;
+}
+
+.account-sidebar .nav-link.active {
+  color: black;
+  border-left: 3px solid black;
+  padding-left: 8px;
+}
+
+a {
+  color: rgb(197, 37, 37);
+  text-decoration: none;
+}
+
+
+.responsive-btn {
+  padding: 5px 15px;
+  font-size: 14px;  
+  transition: all 0.3s; 
+}
+
+@media screen and (max-width: 768px) {
+  .responsive-btn {
+    padding: 4px 9px; 
+    font-size: 10px;  
+  }
+}
+
+.list-group {
+  --bs-list-group-border-radius: 0rem;
+}
+
+.btn-cos-sandwhich {
+  background-color: rgb(108, 117, 125);
+  border-color: rgb(145, 142, 142); 
+  color: white;
+}
+
+.btn-cos-sandwhich:hover,
+.btn-cos-sandwhich:focus,
+.btn-cos-sandwhich:active,
+.btn-cos-sandwhich.show:focus {
+  background-color:  rgb(108, 117, 125);
+  border-color: rgb(145, 142, 142); 
+  color: white;
+  outline: none;
+  box-shadow: none;
+}
+
+.btn-cos-sandwhich[data-bs-toggle="dropdown"]::after {
+  display: none;
+}
+
+.nav-tabs {
+  --bs-nav-tabs-border-color: #c8c8c8;
+}
+
+.setting-bar .nav-link {
+  color: rgb(208, 15, 15);
+  padding: 10px;
+} 
+
+.btn-cus {
+  --bs-btn-color: #fff;
+  --bs-btn-active-color: #fff;
+  --bs-btn-bg: #fff;
+  --bs-btn-border-color: #fff;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #fff;
+  --bs-btn-hover-border-color: #fff;
+  --bs-btn-padding-x: 0rem;
+  --bs-btn-padding-y: 0rem;
+}
