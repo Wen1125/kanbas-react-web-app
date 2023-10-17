@@ -1,0 +1,13 @@
+.breadCrumb {
+    margin: 20px;
+    font-size: 18px;
+    /* color: rgb(221, 24, 24); */
+}
+.breadCrumb a {
+    text-decoration: none;
+    color: rgb(221, 24, 24);
+}
+.breadCrumb a:hover {
+    text-decoration: underline; 
+    color: rgb(221, 24, 24);
+}
