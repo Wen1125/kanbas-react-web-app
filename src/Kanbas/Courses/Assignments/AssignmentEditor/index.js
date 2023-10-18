@@ -18,18 +18,20 @@ function AssignmentEditor() {
     <div>
       <AssignmentEditorBar/>
       <hr/>
-      <h3>Assignment Name</h3>
-      <input value={assignment.title} className="form-control mb-2 me-1" />
-      <div className="d-flex flex-nowrap float-end">
-        <Link to={`/Kanbas/Courses/${courseId}/Assignments`}
-              className="btn btn-danger me-1">
-          Cancel
-        </Link>
-        <button onClick={handleSave} className="btn btn-success me-2">
-          Save
-        </button>
+      <div className="me-2">
+        <h3>Assignment Name</h3>
+        <input value={assignment.title} className="form-control mb-2 me-1" />
+        <div className="d-flex flex-nowrap float-end">
+          <Link to={`/Kanbas/Courses/${courseId}/Assignments`}
+                className="btn btn-danger me-1">
+            Cancel
+          </Link>
+          <button onClick={handleSave} className="btn btn-success me-2">
+            Save
+          </button>
+        </div>
+        <br/>
       </div>
-      <br/>
       <hr/>
     </div>
   );

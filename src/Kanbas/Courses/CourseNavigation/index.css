@@ -8,11 +8,12 @@ wd-course-navigation {
     border: none;
   }
   .wd-course-navigation a {
-    padding-left: 10px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    font-size: 18px;
+    padding-left: 5px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     border: none;
     color: rgb(221, 24, 24);
     text-decoration: none;
@@ -30,4 +31,3 @@ wd-course-navigation {
  {
     border-radius: 0px;
 }
-  

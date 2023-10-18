@@ -1,0 +1,10 @@
+.list-group-item 
+{
+    font-size: 25px;
+}
+
+.list-group-item:first-child, 
+.list-group-item:last-child 
+{
+    border-radius: 0px;
+}

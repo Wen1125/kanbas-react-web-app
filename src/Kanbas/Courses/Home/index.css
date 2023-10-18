@@ -1,18 +1,17 @@
-.statusOptionList {
-    font-size: 15px;
+.statusOptionLink {
+    font-size: 16px;
     text-decoration: none;
-    color: rgb(208, 15, 15);
     text-align: center;
+    color: rgb(208, 15, 15);
     font-weight: 400;
-    height: 40px;
 }
 
-.list-group-item:first-child, .list-group-item:last-child{
+.statusOptionList {
     border-radius: 0px;
 }
 
-.statusEventList {
-    font-size: 15px;
+.statusEventLink {
+    font-size: 20px;
     text-decoration: none;
     color: rgb(208, 15, 15);
     text-align: center;
