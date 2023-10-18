@@ -25,6 +25,18 @@ function Status() {
                 11:45am</a></li>
                 <li><a href="#">CS5610 06 SP23 Lecture Sep 11 at 6pm</a></li> */}
             </ul> 
+            <ul>
+                <li style={{fontSize:"25px"}}><a href="#" className="statusEventLink">Lecture {course.name} Sep 7 at 11:45am</a></li>
+                {/* <li><a href="#">Lecture CS4550.12631.202410 Sep 11 at<br/>
+                11:45am</a></li>
+                <li><a href="#">CS5610 06 SP23 Lecture Sep 11 at 6pm</a></li> */}
+            </ul> 
+            <ul>
+                <li style={{fontSize:"25px"}}><a href="#" className="statusEventLink">Lecture {course.name} Sep 7 at 11:45am</a></li>
+                {/* <li><a href="#">Lecture CS4550.12631.202410 Sep 11 at<br/>
+                11:45am</a></li>
+                <li><a href="#">CS5610 06 SP23 Lecture Sep 11 at 6pm</a></li> */}
+            </ul> 
         </>
     );
 }

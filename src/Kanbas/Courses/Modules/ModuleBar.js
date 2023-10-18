@@ -6,7 +6,7 @@ function ModuleBar() {
     return (
         <div className="d-flex flex-nowrap float-end me-3">
             <button  className="btn btn-sm btn-secondary flex-shrink-0 me-1">Collapse All</button>
-            <button className="btn btn-sm btn-secondary flex-shrink-0 me-1">View Progress</button>
+            {/* <button className="btn btn-sm btn-secondary flex-shrink-0 me-1">View Progress</button> */}
             {/* <div className="dropdown d-inline-block me-1">
                 <button className="btn btn-sm btn-secondary dropdown-toggle flex-shrink-0" type="button">
                     <AiOutlineCheckCircle style={{color: "rgba(35, 155, 24, 0.905"}}/>

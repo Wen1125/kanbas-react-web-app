@@ -26,7 +26,7 @@ function KanbasNavigation() {
     };
     const {pathname} = useLocation();
     return (
-        <div className="list-group wd-kanbas-navigation" style={{width:110}}>
+        <div className="list-group wd-kanbas-navigation position-fixed" style={{width:110}}>
             <div className="block"><img src="/images/logo.jpg" style={{width: "90px"}}/></div>
             {links.map((link, index) => (
                 <Link key={index} to={`/Kanbas/${link}`} className={`list-group-item ${pathname.includes(link) && "active"}`}>
