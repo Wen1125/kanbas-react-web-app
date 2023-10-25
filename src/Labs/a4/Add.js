@@ -8,4 +8,4 @@ function Add({ a, b }) {
       </div>
     );
   }
-  export default Add;
+export default Add;

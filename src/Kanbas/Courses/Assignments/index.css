@@ -8,3 +8,8 @@
 {
     border-radius: 0px;
 }
+
+.clearLink {
+    text-decoration: none;
+    color: white;
+}

@@ -1,13 +1,11 @@
 import { FaBan } from "react-icons/fa";
 import { AiOutlineCheckCircle } from "react-icons/ai";
 import { useParams } from "react-router";
-import db from "../../Database";
 import "./index.css";
 
-function Status() {
+function Status({courses}) {
     const list = ["Import Existing Content", "Import From Commons", "Choose Home Page", "View Course Stream", "New Announcement", "New Analytics", "View Course"];
     const { courseId } = useParams();
-    const courses = db.courses;
     const course = courses.find(course =>(course._id === courseId))
     return (
         <>
@@ -20,19 +18,19 @@ function Status() {
             <h3 class="mt-3">Comming Up</h3>
             <a href="#" className="statusEventLink">View Calendar</a>
             <ul>
-                <li style={{fontSize:"25px"}}><a href="#" className="statusEventLink">Lecture {course.name} Sep 7 at 11:45am</a></li>
+                <li style={{fontSize:"25px"}}><a href="#" className="statusEventLink">Lecture  Sep 7 at 11:45am</a></li>
                 {/* <li><a href="#">Lecture CS4550.12631.202410 Sep 11 at<br/>
                 11:45am</a></li>
                 <li><a href="#">CS5610 06 SP23 Lecture Sep 11 at 6pm</a></li> */}
             </ul> 
             <ul>
-                <li style={{fontSize:"25px"}}><a href="#" className="statusEventLink">Lecture {course.name} Sep 7 at 11:45am</a></li>
+                <li style={{fontSize:"25px"}}><a href="#" className="statusEventLink">Lecture  Sep 7 at 11:45am</a></li>
                 {/* <li><a href="#">Lecture CS4550.12631.202410 Sep 11 at<br/>
                 11:45am</a></li>
                 <li><a href="#">CS5610 06 SP23 Lecture Sep 11 at 6pm</a></li> */}
             </ul> 
             <ul>
-                <li style={{fontSize:"25px"}}><a href="#" className="statusEventLink">Lecture {course.name} Sep 7 at 11:45am</a></li>
+                <li style={{fontSize:"25px"}}><a href="#" className="statusEventLink">Lecture  Sep 7 at 11:45am</a></li>
                 {/* <li><a href="#">Lecture CS4550.12631.202410 Sep 11 at<br/>
                 11:45am</a></li>
                 <li><a href="#">CS5610 06 SP23 Lecture Sep 11 at 6pm</a></li> */}
