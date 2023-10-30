@@ -6,7 +6,6 @@ import "./index.css";
 import { useSelector, useDispatch } from "react-redux";
 import { 
     deleteAssignment,
-    updateAssignment,
     selectAssignment}
 from "./assignmentsReducer";   
 

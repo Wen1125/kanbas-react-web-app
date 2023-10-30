@@ -16,11 +16,11 @@ function Courses({courses}) {
     const course = courses.find((course)=> course._id === courseId);
     return (
         <div className="ms-4">
-            {/* <h1 className="breadCrumb fw-light">
+            <h1 className="breadCrumb fw-light">
                 <IoReorderThreeOutline className="me-2 fs-2" style={{color:"rgb(221, 24, 24)"}}/>
                 <Link to={`/Kanbas/Courses/${courseId}/Home`}>Courses.{course.name}</Link> 
                 {"  >"} {screen}
-            </h1> */}
+            </h1>
             <hr/>
             <div className="row">
                 <div className="col-2 d-none d-md-block" style={{width:"200px"}}>
