@@ -17,7 +17,7 @@ function Kanbas() {
   const addNewCourse = () => {
     setCourses([...courses,
               { ...course,
-                _id: new Date().getTime() }]);
+                _id: new Date().getTime().toString()}]);
   };
   const deleteCourse = (courseId) => {
     setCourses(courses.filter((course) => course._id !== courseId));

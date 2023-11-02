@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import db from "../../Database";
+// import db from "../../Database";
 import { useSelector, useDispatch } from "react-redux";
 import {
   addModule,

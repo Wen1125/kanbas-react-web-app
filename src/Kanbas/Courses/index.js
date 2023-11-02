@@ -14,7 +14,7 @@ function Courses({courses}) {
     const [root, kanbas, courseName, id, screen] = pathname.split("/")
     const {courseId} = useParams()
     const course = courses.find((course)=> course._id === courseId);
-    return (
+     return (
         <div className="ms-4">
             <h1 className="breadCrumb fw-light">
                 <IoReorderThreeOutline className="me-2 fs-2" style={{color:"rgb(221, 24, 24)"}}/>
