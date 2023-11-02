@@ -6,7 +6,8 @@ import "./index.css";
 import { useSelector, useDispatch } from "react-redux";
 import { 
     deleteAssignment,
-    selectAssignment}
+    selectAssignment, 
+    resetAssignment}
 from "./assignmentsReducer";   
 
 function Assignments() {
@@ -20,7 +21,7 @@ function Assignments() {
     const confirmDelete = window.confirm('Are you sure you want to remove the assignment?');
     if (confirmDelete) {
       dispatch(deleteAssignment(assignment._id));
-    }
+    } else {dispatch(resetAssignment)}
   };
   return (
     <div>
@@ -38,15 +39,17 @@ function Assignments() {
       <h2>Assignments for course {courseId}</h2>
       <div className="list-group me-2">
         {courseAssignments.map((assignment) => (
-          <Link
-            key={assignment._id}
-            onClick={()=> {
-              dispatch(selectAssignment(assignment))}} 
-            to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
-            className="list-group-item">
-            <PiDotsSixVerticalBold className="me-1"/>
-            <LuBookKey className="me-5" style={{color:"rgb(55, 194, 111)"}}/>
-            {assignment.title}
+          <div className="list-group-item">
+            <Link className="clearLink2"
+              key={assignment._id}
+              onClick={()=> {
+                dispatch(selectAssignment(assignment))}} 
+              to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
+              >
+              <PiDotsSixVerticalBold className="me-1"/>
+              <LuBookKey className="me-5" style={{color:"rgb(55, 194, 111)"}}/>
+              {assignment.title}
+            </Link>
             <div className="d-inline-block float-end">
               <button onClick={(event)=> {
               event.preventDefault();
@@ -55,7 +58,7 @@ function Assignments() {
                 Delete
               </button>
             </div>
-          </Link>
+          </div>
         ))}
       </div>
     </div>

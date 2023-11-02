@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
 import { useSelector, useDispatch} from "react-redux";
 import AssignmentEditorBar from "./AssignmentEditBar";
-import { addAssignment, selectAssignment, updateAssignment } from "../assignmentsReducer";
+import { addAssignment, selectAssignment, updateAssignment, resetAssignment } from "../assignmentsReducer";
 
 function AssignmentEditor() {
   const assignment = useSelector((state) => state.assignmentsReducer.assignment);
@@ -53,7 +53,7 @@ function AssignmentEditor() {
 
         <div className="d-flex flex-nowrap float-end">
           <Link to={`/Kanbas/Courses/${courseId}/Assignments`}
-                className="btn btn-danger me-1">
+                className="btn btn-danger me-1" onClick={() => dispatch(resetAssignment())}>
             Cancel
           </Link>
           <button onClick={()=>{if(assignment._id === undefined) 
