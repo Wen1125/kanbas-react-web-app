@@ -5,8 +5,7 @@ import ModuleBar from "./ModuleBar";
 
 function Modules() {
   // const { courseId } = useParams();
-  // const flag = db.modules.find((module)=> module.course === courseId);
-  
+  // const flag = db.modules.find((module)=> module.course === courseId); 
   // if (flag !== "undefined")
    return (
     <div>

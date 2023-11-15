@@ -4,7 +4,7 @@ import Status from "./Status";
 // import { useParams } from "react-router";
 // import db from "../../Database";
 
-function Home({courses}) {
+function Home({course}) {
   // const { courseId } = useParams();
   // const flag = db.modules.find((module)=> module.course === courseId);
   // if (flag !== "undefined") 
@@ -16,7 +16,7 @@ function Home({courses}) {
         <ModuleList />
       </div>
       <div className="col d-none d-lg-block ms-4 me-5">
-        <Status courses={courses}/>
+        <Status course={course}/>
       </div>
     </div>
   );

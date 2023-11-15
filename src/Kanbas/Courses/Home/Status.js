@@ -3,10 +3,10 @@ import { AiOutlineCheckCircle } from "react-icons/ai";
 import { useParams } from "react-router";
 import "./index.css";
 
-function Status({courses}) {
+function Status({course}) {
     const list = ["Import Existing Content", "Import From Commons", "Choose Home Page", "View Course Stream", "New Announcement", "New Analytics", "View Course"];
     const { courseId } = useParams();
-    const course = courses.find(course =>(course._id === courseId))
+    // const course = courses.find(course =>(course._id === courseId))
     return (
         <>
             <h2>Course Status</h2>

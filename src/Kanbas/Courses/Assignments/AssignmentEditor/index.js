@@ -3,6 +3,7 @@ import { useNavigate, useParams, Link } from "react-router-dom";
 import { useSelector, useDispatch} from "react-redux";
 import AssignmentEditorBar from "./AssignmentEditBar";
 import { addAssignment, selectAssignment, updateAssignment, resetAssignment } from "../assignmentsReducer";
+import * as client from "../client.js";
 
 function AssignmentEditor() {
   const assignment = useSelector((state) => state.assignmentsReducer.assignment);
@@ -13,6 +14,15 @@ function AssignmentEditor() {
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
   };
   const dispatch = useDispatch();
+  const handleAddAssignment = () => {
+    client.createAssignment(courseId, assignment).then((assignment) => {
+      dispatch(addAssignment(assignment));
+    });
+  };
+  const handleUpdateAssignment = async () => {
+    const status = await client.updateAssignment(assignment);
+    dispatch(updateAssignment(assignment));
+  };
   const [text, setText] = useState("New Assignment Description")
   return (
     <div>
@@ -56,9 +66,9 @@ function AssignmentEditor() {
                 className="btn btn-danger me-1" onClick={() => dispatch(resetAssignment())}>
             Cancel
           </Link>
-          <button onClick={()=>{if(assignment._id === undefined) 
-            {dispatch(addAssignment({...assignment, course: courseId}));} 
-            else {dispatch(updateAssignment(assignment))};
+          <button onClick={()=> {if(assignment._id === undefined) 
+            {handleAddAssignment()}
+            else {handleUpdateAssignment(assignment)};
             handleSave()}} className="btn btn-success me-2">
             Save
           </button>   

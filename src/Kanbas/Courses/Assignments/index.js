@@ -5,22 +5,43 @@ import { PiDotsSixVerticalBold } from "react-icons/pi";
 import "./index.css";
 import { useSelector, useDispatch } from "react-redux";
 import { 
+    selectAssignments,
     deleteAssignment,
     selectAssignment, 
-    resetAssignment}
+    resetAssignment,
+    updateAssignment,
+    }
 from "./assignmentsReducer";   
+import { useEffect } from "react";
+import * as client from "./client.js";
 
 function Assignments() {
   const { courseId } = useParams();
   const assignment = useSelector((state) => state.assignmentsReducer.assignment);
   const assignments = useSelector((state) => state.assignmentsReducer.assignments);
   const dispatch = useDispatch();
-  const courseAssignments = assignments.filter(
-    (assignment) => assignment.course === courseId);
+  useEffect(() => {
+    client.findAssignmentsForCourse(courseId)
+      .then((assignments) =>
+        dispatch(selectAssignments(assignments))
+    );
+  }, [courseId]);
+
+  const handleDeleteAssignment = (assignmentId) => {
+    client.delteAssignment(assignmentId).then((status) => {
+      dispatch(deleteAssignment(assignmentId));
+    });
+  };
+  const handleUpdateAssignment = async () => {
+    const status = await client.updateAssignment(assignment);
+    dispatch(updateAssignment(assignment));
+  };
+  // const courseAssignments = assignments.filter(
+  //   (assignment) => assignment.course === courseId);
   const handleDeleteClick = (assignment) => {
     const confirmDelete = window.confirm('Are you sure you want to remove the assignment?');
     if (confirmDelete) {
-      dispatch(deleteAssignment(assignment._id));
+      handleDeleteAssignment(assignment._id);
     } else {dispatch(resetAssignment)}
   };
   return (
@@ -38,7 +59,7 @@ function Assignments() {
       <hr/>
       <h2>Assignments for course {courseId}</h2>
       <div className="list-group me-2">
-        {courseAssignments.map((assignment) => (
+        {assignments.map((assignment) => (
           <div className="list-group-item">
             <Link className="clearLink2"
               key={assignment._id}
