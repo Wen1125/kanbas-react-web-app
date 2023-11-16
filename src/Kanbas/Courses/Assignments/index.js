@@ -32,10 +32,6 @@ function Assignments() {
       dispatch(deleteAssignment(assignmentId));
     });
   };
-  const handleUpdateAssignment = async () => {
-    const status = await client.updateAssignment(assignment);
-    dispatch(updateAssignment(assignment));
-  };
   // const courseAssignments = assignments.filter(
   //   (assignment) => assignment.course === courseId);
   const handleDeleteClick = (assignment) => {
